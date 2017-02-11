@@ -11,7 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.user.dto.UserRegDao;
 
+/**
+ * @author bridgeit Satyendra Singh.
+ * In this class extend {@link HttpServlet} having two methods one is doPost for Registration form to post value.
+ * Another is doGet method for get value from login form.
+ */
+@SuppressWarnings("serial")
 public class RegSerVlet extends HttpServlet {
+	/* (non-Javadoc)
+	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 */
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 									throws ServletException, IOException {

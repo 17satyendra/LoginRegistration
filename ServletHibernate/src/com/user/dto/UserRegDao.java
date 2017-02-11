@@ -9,11 +9,22 @@ import org.hibernate.criterion.Restrictions;
 
 import com.user.model.UserReg;
 
+/**
+ * @author bridgeit satyendra singh
+ * This class basically gives dao utility 
+ * In this class having two method one is saveUser to save the data for user registration page.
+ * and another is validation to check username and password to be enter in login page.
+ */
 public class UserRegDao {
 	public UserRegDao() {
 		System.out.println(this.getClass().getSimpleName() + "Created...");
 	}
-
+	/**
+	 * @param reg UserReg class reference.
+	 * In this method used to save the data of particular UserReg object 
+	 * Through Registration form page.
+	 * Using {@link Session} and {@Transaction}
+	 */
 	public void saveUser(UserReg reg) {
 		System.out.println("Saving Data...");
 		Configuration cf = new Configuration();
@@ -34,6 +45,13 @@ public class UserRegDao {
 		}
 
 	}
+	/**
+	 * @param username User name from Login page.
+	 * @param password Password from Login page. 
+	 * In this method we gives the two String user name  and password from login pages to validate.
+	 * Using {@link Criteria} with {@link Restrictions}
+	 * @return UserReg object based on user name and password.
+	 */
 	public UserReg validation(String username, String password) {
 		
 		Configuration cf = new Configuration();

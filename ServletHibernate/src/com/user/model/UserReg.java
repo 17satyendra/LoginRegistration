@@ -10,9 +10,16 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
+/**
+ * @author bridgeit Satyendra Singh
+ * This class is a Model class for User Information 
+ * having getter and setter.
+ */
 @Entity
 public class UserReg implements Serializable 
 {
+	
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GenericGenerator(name="gen", strategy="increment")
 	@GeneratedValue(generator="gen")
